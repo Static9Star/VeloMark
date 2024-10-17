@@ -11,7 +11,7 @@ const App = () => {
   return (
     <>
       
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<AdminLogin />} />
         <Route path='admin' element={<AdminDashboard />}>
           <Route path='createEmployee' element={<AddEmployee />} />
@@ -19,7 +19,9 @@ const App = () => {
           <Route path='report' element={<MonthlyReport />} />
         </Route>
         <Route path='punch' element={<EmployeePunch />} />
-      </Routes>
+      </Routes> */}
+      
+      <EmloyeeList />
 
     </>
   )

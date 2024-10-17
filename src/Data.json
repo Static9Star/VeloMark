@@ -1,0 +1,164 @@
+{
+  "employees": {
+    "emp1": {
+      "name": "John Doe",
+      "role": "Software Engineer",
+      "email": "john.doe@example.com",
+      "phone": "9876543210",
+      "eid": "EMP001",
+      "punch_records": {
+        "14-10": { "weekday": "monday", "punch_in": "08:55" },
+        "15-10": { "weekday": "tuesday", "punch_in": "09:16" },
+        "16-10": { "weekday": "wednesday", "punch_in": "10:05" },
+        "17-10": { "weekday": "thursday", "punch_in": "09:10" },
+        "18-10": { "weekday": "friday", "punch_in": "09:45" },
+        "19-10": { "weekday": "saturday", "punch_in": "09:00" },
+        "20-10": { "weekday": "sunday", "punch_in": "09:00" }
+      }
+    },
+    "emp2": {
+      "name": "Jane Smith",
+      "role": "Product Manager",
+      "email": "jane.smith@example.com",
+      "phone": "9876543211",
+      "eid": "EMP002",
+      "punch_records": {
+        "14-10": { "weekday": "monday", "punch_in": "09:05" },
+        "15-10": { "weekday": "tuesday", "punch_in": "09:20" },
+        "16-10": { "weekday": "wednesday", "punch_in": "10:00" },
+        "17-10": { "weekday": "thursday", "punch_in": "09:15" },
+        "18-10": { "weekday": "friday", "punch_in": "09:35" },
+        "19-10": { "weekday": "saturday", "punch_in": "09:00" },
+        "20-10": { "weekday": "sunday", "punch_in": "09:00" }
+      }
+    },
+    "emp3": {
+      "name": "Michael Brown",
+      "role": "Designer",
+      "email": "michael.brown@example.com",
+      "phone": "9876543212",
+      "eid": "EMP003",
+      "punch_records": {
+        "14-10": { "weekday": "monday", "punch_in": "09:00" },
+        "15-10": { "weekday": "tuesday", "punch_in": "09:10" },
+        "16-10": { "weekday": "wednesday", "punch_in": "09:20" },
+        "17-10": { "weekday": "thursday", "punch_in": "09:45" },
+        "18-10": { "weekday": "friday", "punch_in": "09:30" },
+        "19-10": { "weekday": "saturday", "punch_in": "09:00" },
+        "20-10": { "weekday": "sunday", "punch_in": "09:00" }
+      }
+    },
+    "emp4": {
+      "name": "Emily Clark",
+      "role": "QA Engineer",
+      "email": "emily.clark@example.com",
+      "phone": "9876543213",
+      "eid": "EMP004",
+      "punch_records": {
+        "14-10": { "weekday": "monday", "punch_in": "08:55" },
+        "15-10": { "weekday": "tuesday", "punch_in": "08:50" },
+        "16-10": { "weekday": "wednesday", "punch_in": "09:15" },
+        "17-10": { "weekday": "thursday", "punch_in": "09:05" },
+        "18-10": { "weekday": "friday", "punch_in": "09:00" },
+        "19-10": { "weekday": "saturday", "punch_in": "09:00" },
+        "20-10": { "weekday": "sunday", "punch_in": "09:00" }
+      }
+    },
+    "emp5": {
+      "name": "David Wilson",
+      "role": "HR Manager",
+      "email": "david.wilson@example.com",
+      "phone": "9876543214",
+      "eid": "EMP005",
+      "punch_records": {
+        "14-10": { "weekday": "monday", "punch_in": "09:05" },
+        "15-10": { "weekday": "tuesday", "punch_in": "09:00" },
+        "16-10": { "weekday": "wednesday", "punch_in": "09:17" },
+        "17-10": { "weekday": "thursday", "punch_in": "09:30" },
+        "18-10": { "weekday": "friday", "punch_in": "09:50" },
+        "19-10": { "weekday": "saturday", "punch_in": "09:00" },
+        "20-10": { "weekday": "sunday", "punch_in": "09:00" }
+      }
+    },
+    "emp6": {
+      "name": "Olivia Martinez",
+      "role": "Marketing Executive",
+      "email": "olivia.martinez@example.com",
+      "phone": "9876543215",
+      "eid": "EMP006",
+      "punch_records": {
+        "14-10": { "weekday": "monday", "punch_in": "08:45" },
+        "15-10": { "weekday": "tuesday", "punch_in": "09:50" },
+        "16-10": { "weekday": "wednesday", "punch_in": "09:00" },
+        "17-10": { "weekday": "thursday", "punch_in": "09:20" },
+        "18-10": { "weekday": "friday", "punch_in": "09:15" },
+        "19-10": { "weekday": "saturday", "punch_in": "09:00" },
+        "20-10": { "weekday": "sunday", "punch_in": "09:00" }
+      }
+    },
+    "emp7": {
+      "name": "Chris Lee",
+      "role": "Operations Manager",
+      "email": "chris.lee@example.com",
+      "phone": "9876543216",
+      "eid": "EMP007",
+      "punch_records": {
+        "14-10": { "weekday": "monday", "punch_in": "09:10" },
+        "15-10": { "weekday": "tuesday", "punch_in": "09:20" },
+        "16-10": { "weekday": "wednesday", "punch_in": "09:10" },
+        "17-10": { "weekday": "thursday", "punch_in": "10:05" },
+        "18-10": { "weekday": "friday", "punch_in": "09:15" },
+        "19-10": { "weekday": "saturday", "punch_in": "09:00" },
+        "20-10": { "weekday": "sunday", "punch_in": "09:00" }
+      }
+    },
+    "emp8": {
+      "name": "Sophia Rodriguez",
+      "role": "Sales Manager",
+      "email": "sophia.rodriguez@example.com",
+      "phone": "9876543217",
+      "eid": "EMP008",
+      "punch_records": {
+        "14-10": { "weekday": "monday", "punch_in": "08:55" },
+        "15-10": { "weekday": "tuesday", "punch_in": "09:15" },
+        "16-10": { "weekday": "wednesday", "punch_in": "09:00" },
+        "17-10": { "weekday": "thursday", "punch_in": "09:10" },
+        "18-10": { "weekday": "friday", "punch_in": "09:55" },
+        "19-10": { "weekday": "saturday", "punch_in": "09:00" },
+        "20-10": { "weekday": "sunday", "punch_in": "09:00" }
+      }
+    },
+    "emp9": {
+      "name": "Liam Patel",
+      "role": "Business Analyst",
+      "email": "liam.patel@example.com",
+      "phone": "9876543218",
+      "eid": "EMP009",
+      "punch_records": {
+        "14-10": { "weekday": "monday", "punch_in": "09:15" },
+        "15-10": { "weekday": "tuesday", "punch_in": "09:10" },
+        "16-10": { "weekday": "wednesday", "punch_in": "09:05" },
+        "17-10": { "weekday": "thursday", "punch_in": "08:45" },
+        "18-10": { "weekday": "friday", "punch_in": "10:00" },
+        "19-10": { "weekday": "saturday", "punch_in": "09:00" },
+        "20-10": { "weekday": "sunday", "punch_in": "09:00" }
+      }
+    },
+    "emp10": {
+      "name": "Isabella Gonzalez",
+      "role": "Data Scientist",
+      "email": "isabella.gonzalez@example.com",
+      "phone": "9876543219",
+      "eid": "EMP010",
+      "punch_records": {
+        "14-10": { "weekday": "monday", "punch_in": "09:00" },
+        "15-10": { "weekday": "tuesday", "punch_in": "09:10" },
+        "16-10": { "weekday": "wednesday", "punch_in": "09:20" },
+        "17-10": { "weekday": "thursday", "punch_in": "10:00" },
+        "18-10": { "weekday": "friday", "punch_in": "09:30" },
+        "19-10": { "weekday": "saturday", "punch_in": "09:00" },
+        "20-10": { "weekday": "sunday", "punch_in": "09:00" }
+      }
+    }
+  }
+}
