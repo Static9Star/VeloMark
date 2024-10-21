@@ -5,23 +5,23 @@ import AdminDashboard from './Admin/AdminDashboard'
 import EmployeePunch from './EmployeePunch'
 import AddEmployee from './Admin/AddEmployee'
 import EmloyeeList from './Admin/EmloyeeList'
-import MonthlyReport from './Admin/MonthlyReport'
+import WeeklyReport from './Admin/WeeklyReport'
 
 const App = () => {
   return (
     <>
       
-      {/* <Routes>
+      <Routes>
         <Route path='/' element={<AdminLogin />} />
         <Route path='admin' element={<AdminDashboard />}>
-          <Route path='createEmployee' element={<AddEmployee />} />
+          <Route index element={<AddEmployee />} />
           <Route path='employeeData' element={<EmloyeeList />} />
-          <Route path='report' element={<MonthlyReport />} />
+          <Route path='report' element={<WeeklyReport />} />
         </Route>
         <Route path='punch' element={<EmployeePunch />} />
-      </Routes> */}
+      </Routes>
       
-      <EmloyeeList />
+
 
     </>
   )

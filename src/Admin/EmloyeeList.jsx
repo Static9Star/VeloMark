@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getEmployees, updateEmployee, deleteEmployee } from '../FirebaseServices'; 
+import { getEmployees, updateEmployee, deleteEmployee } from '../FirebaseServices';
 
 const EmployeeList = () => {
-
   const [employees, setEmployees] = useState({});
   const [editEmployeeId, setEditEmployeeId] = useState(null);
   const [editData, setEditData] = useState({});
@@ -63,13 +62,13 @@ const EmployeeList = () => {
     }));
   };
 
-  const handlePunchRecordChange = (date, value) => {
+  const handlePunchRecordChange = (weekday, value) => {
     setEditData((prevState) => ({
       ...prevState,
       punch_records: {
         ...prevState.punch_records,
-        [date]: {
-          ...prevState.punch_records[date],
+        [weekday]: {
+          ...prevState.punch_records[weekday], // Keep existing data for the weekday
           punch_in: value,
         },
       },
@@ -78,26 +77,33 @@ const EmployeeList = () => {
 
   const navigateBack = useNavigate();
 
+  // Define the weekdays in order
+  const weekdays = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"];
+
   return (
     <>
+      <p className="text-start text-light display-6 position-relative">
+        Empl<u>oyee Li</u>st
+      </p>
+
       {Object.keys(employees).length > 0 ? (
         <table className="table table-hover text-center">
-          <thead className="thead-dark fs-4 border-0">
-            <tr>
-              <th>#</th>
-              <th>Name</th>
-              <th>Role</th>
-              <th>Phone</th>
-              <th>Email</th>
-              <th>Actions</th>
+          <thead className="fs-4 border-bottom border-light">
+            <tr className='custom-table-bg text-light'>
+              <th className='custom-table-bg text-light'>#</th>
+              <th className='custom-table-bg text-light'>Name</th>
+              <th className='custom-table-bg text-light'>Role</th>
+              <th className='custom-table-bg text-light'>Phone</th>
+              <th className='custom-table-bg text-light'>Email</th>
+              <th className='custom-table-bg text-light'>Actions</th>
             </tr>
           </thead>
           <tbody>
             {Object.keys(employees).map((empId) => (
               <React.Fragment key={empId}>
                 <tr className="fw-bolder">
-                  <td className="border-0 border-end border-dark">{empId}</td>
-                  <td className="border-0 border-end border-dark">
+                  <td className="custom-table-bg text-light border-0 border-end border-light">{empId}</td>
+                  <td className="custom-table-bg text-light border-0 border-end border-light">
                     {editEmployeeId === empId ? (
                       <input
                         type="text"
@@ -108,7 +114,7 @@ const EmployeeList = () => {
                       employees[empId].name
                     )}
                   </td>
-                  <td className="border-0 border-end border-dark">
+                  <td className="custom-table-bg text-light border-0 border-end border-light">
                     {editEmployeeId === empId ? (
                       <input
                         type="text"
@@ -119,7 +125,7 @@ const EmployeeList = () => {
                       employees[empId].role
                     )}
                   </td>
-                  <td className="border-0 border-end border-dark">
+                  <td className="custom-table-bg text-light border-0 border-end border-light">
                     {editEmployeeId === empId ? (
                       <input
                         type="text"
@@ -130,7 +136,7 @@ const EmployeeList = () => {
                       employees[empId].phone
                     )}
                   </td>
-                  <td className="border-0 border-end border-dark">
+                  <td className="custom-table-bg text-light border-0 border-end border-light">
                     {editEmployeeId === empId ? (
                       <input
                         type="text"
@@ -141,7 +147,7 @@ const EmployeeList = () => {
                       employees[empId].email
                     )}
                   </td>
-                  <td className="d-flex justify-content-evenly">
+                  <td className="d-flex border-0 justify-content-evenly custom-table-bg text-light">
                     {editEmployeeId === empId ? (
                       <>
                         <button
@@ -154,7 +160,7 @@ const EmployeeList = () => {
                           <i className="fs-5 bi bi-check"></i>
                         </button>
                         <button
-                          className="btn btn-outline-dark btn-sm mx-2"
+                          className="btn btn-outline-light btn-sm mx-2"
                           data-bs-toggle="tooltip"
                           data-bs-placement="top"
                           title="Cancel editing"
@@ -187,47 +193,48 @@ const EmployeeList = () => {
                     )}
                   </td>
                 </tr>
-                <tr className="border-0">
-                  <td colSpan="6">
+                <tr className="border-bottom border-light">
+                  <td colSpan="6" className='custom-table-bg text-light'>
                     <div className="d-flex justify-content-evenly flex-wrap">
-                      {employees[empId].punch_records &&
-                        Object.keys(employees[empId].punch_records).map((date) => {
-                          const punchInTime = employees[empId].punch_records[date].punch_in;
-                          const weekday = employees[empId].punch_records[date].weekday.substring(0, 3).toUpperCase();
+                      {weekdays.map((weekday) => {
+                        const record = employees[empId].punch_records[weekday.toLowerCase()]; // Get punch record using lowercase weekday
+                        const punchInTime = record?.punch_in || '00:00';
 
-                          let bgColorClass = '';
-                          if (punchInTime >= '09:30') {
-                            bgColorClass = 'btn btn-outline-danger';
-                          } else if (punchInTime >= '09:15' || punchInTime === '09:06') {
-                            bgColorClass = 'btn btn-outline-warning';
-                          } else {
-                            bgColorClass = 'btn btn-outline-success';
-                          }
+                        let bgColorClass = '';
+                        if (punchInTime === '00:00') {
+                          bgColorClass = 'btn btn-outline-secondary';
+                        } else if (punchInTime >= '09:30') {
+                          bgColorClass = 'btn btn-outline-danger';
+                        } else if (punchInTime >= '09:15' || punchInTime === '09:06') {
+                          bgColorClass = 'btn btn-outline-warning';
+                        } else {
+                          bgColorClass = 'btn btn-outline-success';
+                        }
 
-                          return (
-                            <div key={date}>
-                              {editEmployeeId === empId ? (
-                                <input
-                                  type="time"
-                                  value={editData.punch_records[date]?.punch_in || punchInTime}
-                                  onChange={(e) =>
-                                    handlePunchRecordChange(date, e.target.value)
-                                  }
-                                  className="mx-2 p-2 fw-bolder rounded"
-                                />
-                              ) : (
-                                <button
-                                  className={`mx-2 p-2 fw-bolder rounded ${bgColorClass}`}
-                                  data-bs-toggle="tooltip"
-                                  data-bs-placement="right"
-                                  title={weekday}
-                                >
-                                  {punchInTime}
-                                </button>
-                              )}
-                            </div>
-                          );
-                        })}
+                        return (
+                          <div key={weekday}>
+                            {editEmployeeId === empId ? (
+                              <input
+                                type="time"
+                                value={editData.punch_records[weekday.toLowerCase()]?.punch_in || punchInTime}
+                                onChange={(e) =>
+                                  handlePunchRecordChange(weekday.toLowerCase(), e.target.value)
+                                }
+                                className="mx-2 p-2 fw-bolder rounded"
+                              />
+                            ) : (
+                              <button
+                                className={`mx-2 p-2 fw-bolder rounded ${bgColorClass}`}
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="right"
+                                title={weekday.slice(0, 3)} // Use the weekday directly from the fetched data
+                              >
+                                {punchInTime}
+                              </button>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
                   </td>
                 </tr>
@@ -238,9 +245,6 @@ const EmployeeList = () => {
       ) : (
         <p className="text-center">No employees available.</p>
       )}
-
-      <h1>View, Edit or Delete</h1>
-      <button onClick={() => navigateBack(-1)}>Back to Dashboard</button>
     </>
   );
 };
