@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Static9Star/VeloMark.git/static/css/main.7058d6de.css",
-    "main.js": "/Static9Star/VeloMark.git/static/js/main.d5294355.js",
-    "static/js/213.34b525eb.chunk.js": "/Static9Star/VeloMark.git/static/js/213.34b525eb.chunk.js",
-    "static/js/732.1ca64031.chunk.js": "/Static9Star/VeloMark.git/static/js/732.1ca64031.chunk.js",
-    "static/media/favicon.png": "/Static9Star/VeloMark.git/static/media/favicon.8bc5db9167e2f94edb0d.png",
-    "static/media/logo.png": "/Static9Star/VeloMark.git/static/media/logo.2716bc996be2786dc94e.png",
-    "index.html": "/Static9Star/VeloMark.git/index.html",
-    "main.7058d6de.css.map": "/Static9Star/VeloMark.git/static/css/main.7058d6de.css.map",
-    "main.d5294355.js.map": "/Static9Star/VeloMark.git/static/js/main.d5294355.js.map",
-    "213.34b525eb.chunk.js.map": "/Static9Star/VeloMark.git/static/js/213.34b525eb.chunk.js.map",
-    "732.1ca64031.chunk.js.map": "/Static9Star/VeloMark.git/static/js/732.1ca64031.chunk.js.map"
+    "main.css": "/VeloMark/static/css/main.7058d6de.css",
+    "main.js": "/VeloMark/static/js/main.9a2c761e.js",
+    "static/js/213.34b525eb.chunk.js": "/VeloMark/static/js/213.34b525eb.chunk.js",
+    "static/js/732.1ca64031.chunk.js": "/VeloMark/static/js/732.1ca64031.chunk.js",
+    "static/media/favicon.png": "/VeloMark/static/media/favicon.8bc5db9167e2f94edb0d.png",
+    "static/media/logo.png": "/VeloMark/static/media/logo.2716bc996be2786dc94e.png",
+    "index.html": "/VeloMark/index.html",
+    "main.7058d6de.css.map": "/VeloMark/static/css/main.7058d6de.css.map",
+    "main.9a2c761e.js.map": "/VeloMark/static/js/main.9a2c761e.js.map",
+    "213.34b525eb.chunk.js.map": "/VeloMark/static/js/213.34b525eb.chunk.js.map",
+    "732.1ca64031.chunk.js.map": "/VeloMark/static/js/732.1ca64031.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7058d6de.css",
-    "static/js/main.d5294355.js"
+    "static/js/main.9a2c761e.js"
   ]
 }
