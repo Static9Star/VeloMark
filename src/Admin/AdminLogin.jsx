@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../FirebaseServices'; // Import the loginUser function
+import background from '../favicon.png';
+import logo from '../logo.png';
 
 const AdminLogin = () => {
   const navigate = useNavigate();
@@ -26,7 +28,11 @@ const AdminLogin = () => {
   return (
     <>
       <p className='display-6 text-center text-light pt-1'><u>VeloMark : Velocity Marksheet</u></p>
+      {/* <img src={logo} className='position-absolute' style={{width:'450px',height:'120px',left:'50%',top:'-2%',transform:'translateX(-50%)'}} /> */}
+
+      <img src={background} className='position-absolute' style={{width:'500px',height:'450px',top:'50%',left:'50%',transform:'translate(-50%, -50%)'}} />
       
+
       <p id="status" className="text-info" dangerouslySetInnerHTML={{ __html: status }}></p>
       <small><span id="error" className="text-danger position-absolute fs-6 fw-bolder" style={{left:'50%',transform:'translateX(-50%)',top:'15%'}}>{error}</span></small>
       

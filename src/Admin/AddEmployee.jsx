@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { addEmployeeToDB } from '../FirebaseServices'; // Import the Firebase function to add employee
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import background from '../favicon.png';
+import logo from '../logo.png';
 
 const AddEmployee = () => {
   const navigate = useNavigate();
@@ -44,9 +46,12 @@ const AddEmployee = () => {
         <u>Add Emp</u>loyee
       </p>
 
+{/* <img src={logo} className='border border-danger border-5 position-absolute' style={{width:'450px',height:'150px',left:'50%',top:'-5%',transform:'translateX(-50%)'}} /> */}
+<img src={background} className='position-absolute' style={{width:'600px',height:'500px',top:'50%',left:'50%',transform:'translate(-42%, -50%)'}} />
+
 
       <form class="px-5 mx-5 position-absolute" style={{top:'50%',left:'50%',transform:'translate(-50%, -50%)',width:'clamp(550px, 50vw, 800px)'}} onSubmit={handleSubmit}>
-        <div className='row border-0 mx-5 py-3' style={{backgroundColor:'rgba(0,0,0,0.6)'}}>
+        <div className='row border-0 mx-5 py-3 rounded-5' style={{backgroundColor:'rgba(0,0,0,0.6)'}}>
       <div class="mt-3 col-12">
         <label for="name" class="form-label text-light fs-6">Name</label>
         <input type="text" class="form-control" id="name" placeholder="Jhnon, Rockey ,etc" name="name"
@@ -75,7 +80,7 @@ const AddEmployee = () => {
         required  />
       </div>
       <div class="col-5 mt-5" style={{}}>
-        <button type="submit" class="btn btn-outline-warning px-3">Add <i className='bi bi-plus'></i> </button>
+        <button type="submit" class="btn btn-outline-primary px-3">Add <i className='bi bi-plus'></i> </button>
       </div>
       </div>
     </form>
